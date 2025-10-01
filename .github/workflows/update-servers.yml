@@ -27,7 +27,7 @@ jobs:
         run: sudo mkdir -p /gluetun && sudo chmod 777 /gluetun
 
       - name: Update servers.json
-        run: go run ./cmd/gluetun update -maintainer -all
+        run: go run ./cmd/gluetun update -maintainer -all -minratio 0.1
 
       - name: Check for changes
         id: git-check
