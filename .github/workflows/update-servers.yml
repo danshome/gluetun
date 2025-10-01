@@ -23,6 +23,9 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Create gluetun directory
+        run: sudo mkdir -p /gluetun && sudo chmod 777 /gluetun
+
       - name: Update servers.json
         run: go run ./cmd/gluetun update -maintainer -all
 
